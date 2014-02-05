@@ -1,0 +1,128 @@
+<div data-role="page" id="homepage">
+    <div data-role="header">
+         <h1>Homepage</h1>
+
+    </div>
+    <div data-role="content">
+         <h1><font color="white">Voila !</font></h1>
+
+         <h2><a href="#mainpage" data-transition="fade"><font color="blue">Plan Your Event</font></a></h2>
+
+    </div>
+</div>
+<div data-role="page" id="mainpage" >
+    <div data-role="header">
+         <h1>Make your choice</h1>
+
+    </div>
+    <div data-role="content">
+        <p><font color="white">Plan out your event by opting for the services which best suite your event. Book a wedding hall, look for theme based event decorators, live music and discover more !</font></p>
+ <div data-role="content"> <a href="#restaurant" data-role="button">Restaurant</a>
+ <a href="#liveevent" data-role="button">Live Event</a>
+ <a href="#themedecorators" data-role="button">Theme Decorators</a>
+ <a href="#foodservices" data-role="button">Food Services</a>
+ <a href="#photograhy" data-role="button">Photography</a>
+ <a href="#Maps" data-role="button">Google Maps & Weather</a>
+
+        </div> <a href="#homepage">Go to Home Page</a>
+
+    </div>
+    <div data-role="footer" data-theme="e" data-position="fixed">
+         <h1>Footer Text</h1>
+
+    </div>
+</div>
+<div data-role="page" id="restaurant">
+    <div data-role="header"> <a href="#homepage" data-role="button">Home</a>
+
+         <h1>Restaurant Page</h1>
+ <a href="#" data-role="button">Search</a>
+    </div>
+    <div data-role="content">
+        <h1>Pick Your Restaurant</h1>
+ <div data-role="content"> <a href="#" data-role="button">P.F Chang's</a>
+ <a href="#" data-role="button">Masalas</a>
+ <a href="#" data-role="button">Pizza Hut</a>
+ <a href="#" data-role="button">Chipotle</a>
+ <a href="#" data-role="button">SubWay</a>
+         </div>
+    </div>
+    
+    <div data-role="footer" data-position="fixed">
+         <h1>All Rights Reserved</h1>
+
+    </div>
+</div>
+    
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&amp;libraries=weather"></script>
+<script type="text/javascript" src="js/jtwitter.js"></script>
+<div data-role="page" id="Maps">
+    <div data-role="header"> <a data-rel="back" data-icon="home">Home</a>
+
+         <h1>Map & Weather Forecast</h1>
+
+    </div>
+    <div data-role="content">
+        <p><a href="#GetDirectionsPage" data-role="button"> Google Maps Service - Directions and weather</a>
+
+        </p>
+        <div data-role="controlgroup" data-type="horizontal"> <a href="#" data-role="button" data-rel="back" data-icon="back">Go Back</a>
+
+        </div>
+    </div>
+</div>
+<div data-role="page" id="GetDirectionsPage">
+    <div data-role="header"> <a data-rel="back" data-icon="home">Home</a>
+
+         <h1>Route Map & Weather Forecast</h1>
+
+    </div>
+    <div data-role="content" id="GetDirectionsPage">
+        <div data-role="controlgroup" data-type="horizontal"> <a href="#" data-role="button" data-rel="back" data-icon="back">Go Back</a>
+
+        </div>
+    </div>
+    <div id="panel"> <b>Start: </b>
+
+        <select id="start" onchange="calcRoute();">
+            <option value="oasis, kc">Oasis</option>
+            <option value="st louis, mo">St Louis</option>
+            <option value="joplin, mo">Joplin, MO</option>
+            <option value="oklahoma city, ok">Oklahoma City</option>
+            <option value="plaza, mo">Plaza, Kansas</option>
+            <option value="amarillo, tx">Amarillo</option>
+            <option value="gallup, nm">Gallup, NM</option>
+            <option value="flagstaff, az">Flagstaff, AZ</option>
+            <option value="winona, az">Winona</option>
+            <option value="kingman, az">Kingman</option>
+            <option value="barstow, ca">Barstow</option>
+            <option value="san bernardino, ca">San Bernardino</option>
+            <option value="los angeles, ca">Los Angeles</option>
+        </select> <b>End: </b>
+
+        <select id="end">
+            <option value="st louis, mo">St Louis</option>
+            <option value="chicago, il">Chicago</option>
+            <option value="joplin, mo">Joplin, MO</option>
+            <option value="oklahoma city, ok">Oklahoma City</option>
+            <option value="amarillo, tx">Amarillo</option>
+            <option value="gallup, nm">Gallup, NM</option>
+            <option value="flagstaff, az">Flagstaff, AZ</option>
+            <option value="winona, az">Winona</option>
+            <option value="kingman, az">Kingman</option>
+            <option value="barstow, ca">Barstow</option>
+            <option value="san bernardino, ca">San Bernardino</option>
+            <option value="los angeles, ca">Los Angeles</option>
+        </select> <b>Transportation Mode: </b>
+
+        <select id="mode">
+            <option value="DRIVING">Driving</option>
+            <option value="WALKING">Walking</option>
+            <option value="BICYCLING">Bicycling</option>
+        </select>
+    </div>
+    <div data-role="content" id="map_canvas"></div>
+    <div id="results" style="display:none;">
+        <div id="directions"></div>
+    </div>
+</div>
